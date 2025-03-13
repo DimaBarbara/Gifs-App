@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const NotFoundPage = () => {
   return (
-    <div>NotFoundPage</div>
-  )
-}
+    <div>
+      <img src="../../public/404.jpg" alt="404" />
+    </div>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

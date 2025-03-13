@@ -3,9 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import SearchPage from "../../pages/SearchPage";
 import NotFoundPage from "../../pages/NotFoundPage";
 import TrendPage from "../../pages/TrendPage";
-import RandomPage from "../../pages/RAndomPage";
+
 import Layout from "../Layout";
 import s from "./App.module.css";
+import RandomPage from "../../pages/RandomPage";
 
 const App = () => {
   return (
@@ -25,8 +26,8 @@ const App = () => {
           <Route index element={<SearchPage />}></Route>
           <Route path="/random" element={<RandomPage />}></Route>
           <Route path="/trend" element={<TrendPage />}></Route>
-          <Route path="*" element={<NotFoundPage />}></Route>
         </Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </div>
   );

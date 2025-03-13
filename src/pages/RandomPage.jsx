@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRandomGifs } from "../redux/operations";
 import s from "../components/SearchBar/SearchBar.module.css";
+
 const RandomPage = () => {
   const { gif, loading, error } = useSelector((state) => state.randomGifs);
   const dispatch = useDispatch();
