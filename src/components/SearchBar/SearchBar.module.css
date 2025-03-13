@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  gap: 15px;
+}
+.input {
+  width: 600px;
+  background-color: antiquewhite;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.button {
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.button:hover {
+  border-bottom: 1px solid;
+  border-color: aliceblue;
+  transform: scale(1.05);
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+@media (max-width: 480px) {
+  .input {
+    width: 200px;
+  }
+}

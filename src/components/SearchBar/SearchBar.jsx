@@ -1,6 +1,7 @@
 import React from "react";
 import { clearGifs } from "../../redux/searchSlice";
 import { useDispatch } from "react-redux";
+import s from "./SearchBar.module.css";
 
 const SearchBar = ({ onSubmit }) => {
   const dispatch = useDispatch();
@@ -14,11 +15,32 @@ const SearchBar = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={submitForm}>
-      <input type="text" name="topic" placeholder="text name of gif" />
-      <button type="submit">Search</button>
-      <button type="button" onClick={() => dispatch(clearGifs())}>
-        X
+    <form onSubmit={submitForm} className={s.form}>
+      <input
+        type="text"
+        name="topic"
+        placeholder="Search..."
+        className={s.input}
+      />
+      <button type="submit" className={s.button}>
+        <img
+          src="../../../public/svg/checkmark.svg"
+          alt="Search"
+          width="24"
+          height="24"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => dispatch(clearGifs())}
+        className={s.button}
+      >
+        <img
+          src="../../../public/svg/cross.svg"
+          alt="Clear"
+          width="24"
+          height="24"
+        />
       </button>
     </form>
   );

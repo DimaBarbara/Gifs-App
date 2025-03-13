@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchGifs } from "../redux/operations";
 import { clearGifs, setPage, setQuery } from "../redux/searchSlice";
 import GifsList from "../components/GifsList/GifsList";
+import s from "../components/SearchBar/SearchBar.module.css";
 const SearchPage = () => {
   const dispatch = useDispatch();
   const { gifs, loading, error, query, page } = useSelector(
@@ -25,13 +26,20 @@ const SearchPage = () => {
     dispatch(setPage(page + 1));
   };
   return (
-    <div>
+    <div className={s.div}>
       <SearchBar onSubmit={handleSearch} />
       {loading && <p>Loading...</p>}
       {!error && <GifsList gifs={gifs} />}
-      <button type="button" onClick={loadMore}>
-        Load More
-      </button>
+      {gifs.length > 0 && (
+        <button type="button" onClick={loadMore} className={s.button}>
+          <img
+            src="../../public/svg/arrow-down.svg"
+            alt="LoadMore"
+            width="24"
+            height="24"
+          />
+        </button>
+      )}
     </div>
   );
 };
