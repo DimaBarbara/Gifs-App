@@ -20,12 +20,7 @@ const RandomPage = () => {
         <img src={gif.images.original.url} alt="Random Gif" />
       )}
       <button type="button" onClick={handleRandom} className={s.button}>
-        <img
-          src="../../public/svg/last.svg"
-          alt="Another"
-          width="24"
-          height="24"
-        />
+        <img src="/svg/last.svg" alt="Another" width="24" height="24" />
       </button>
     </div>
   );

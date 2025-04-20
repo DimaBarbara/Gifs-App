@@ -33,7 +33,7 @@ const SearchPage = () => {
       {gifs.length > 0 && (
         <button type="button" onClick={loadMore} className={s.button}>
           <img
-            src="../../public/svg/arrow-down.svg"
+            src="/svg/arrow-down.svg"
             alt="LoadMore"
             width="24"
             height="24"

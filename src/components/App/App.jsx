@@ -13,12 +13,7 @@ const App = () => {
     <div className={s.mainDiv}>
       <div className={s.giphyDiv}>
         <h2 className={s.giphyH}>GIPHY</h2>
-        <img
-          src="../public/GIPHY Icon LightBackgrounds 720.png"
-          alt="GIPHY"
-          width="50"
-          height="50"
-        />
+        <img src="/giphy.png" alt="GIPHY" width="50" height="50" />
       </div>
 
       <Routes>

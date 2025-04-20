@@ -22,12 +22,7 @@ const TrendPage = () => {
       {loading && <p>Loading...</p>}
       {!error && <GifsList gifs={gifs} />}
       <button type="button" onClick={loadMore} className={s.button}>
-        <img
-          src="../../public/svg/arrow-down.svg"
-          alt="LoadMore"
-          width="24"
-          height="24"
-        />
+        <img src="/svg/arrow-down.svg" alt="LoadMore" width="24" height="24" />
       </button>
     </div>
   );

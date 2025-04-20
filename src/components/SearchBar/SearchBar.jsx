@@ -23,24 +23,14 @@ const SearchBar = ({ onSubmit }) => {
         className={s.input}
       />
       <button type="submit" className={s.button}>
-        <img
-          src="../../../public/svg/checkmark.svg"
-          alt="Search"
-          width="24"
-          height="24"
-        />
+        <img src="/svg/checkmark.svg" alt="Search" width="24" height="24" />
       </button>
       <button
         type="button"
         onClick={() => dispatch(clearGifs())}
         className={s.button}
       >
-        <img
-          src="../../../public/svg/cross.svg"
-          alt="Clear"
-          width="24"
-          height="24"
-        />
+        <img src="/svg/cross.svg" alt="Clear" width="24" height="24" />
       </button>
     </form>
   );
